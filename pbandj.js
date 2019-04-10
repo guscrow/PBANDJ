@@ -79,6 +79,13 @@ var xScale = d3.scaleLinear()
 var yScale = d3.scaleLinear()
                 .domain([0,100])
                 .range([height,0]);
+var xAxis = d3.axisBottom()
+              .scale(xScale)
+var yAxis = d3.axisLeft()
+              .scale(yScale)
+svg.append('g').classed("yAxis",true)
+              .call(yAxis)
+              .attr("transform","translate("+margins.left+","+(margins.top)+ ")")
 
 var colors = d3.scaleOrdinal(d3.schemeSet3);
 
@@ -138,7 +145,7 @@ barLand.selectAll("rect")
       .attr("font-size", "11px")
       .attr("font-weight", "bold")
       .attr("fill", "black")
-      .text(d.rt_score);
+      .text(d.rt_score + d.title);
 
 
   })
