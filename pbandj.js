@@ -65,7 +65,7 @@ var margins =
 {
   top:20,
   bottom:10,
-  left:20,
+  left:30,
   right:10
 }
 
@@ -144,7 +144,7 @@ barLand.selectAll("rect")
       .attr("font-family", "sans-serif")
       .attr("font-size", "11px")
       .attr("font-weight", "bold")
-      .attr("fill", "black")
+      .attr("fill", "pink")
       .text(d.rt_score + d.title);
 
 
