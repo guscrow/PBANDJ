@@ -66,7 +66,7 @@ var margins =
   top:20,
   bottom:10,
   left:10,
-  right:10
+  right:20
 }
 
 var width = screen.width -margins.left -margins.right;
